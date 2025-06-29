@@ -1,42 +1,48 @@
-import { Button } from "@/components/ui/button";
-import { Home, ShoppingCart, HelpCircle, Users } from "lucide-react";
+import { motion } from "framer-motion";
 import { Link, useLocation } from "wouter";
 
-export default function Navigation() {
+export default function Header() {
   const [location] = useLocation();
 
-  const navItems = [
-    { href: "/", label: "Home", icon: Home },
-    { href: "/shop", label: "Shop", icon: ShoppingCart },
-    { href: "/help", label: "Get Our Help", icon: HelpCircle },
-    { href: "/about", label: "About Us", icon: Users },
-  ];
-
   return (
-    <nav className="fixed top-4 right-4 z-50">
-      <div className="bg-black/80 backdrop-blur-sm border border-orange-500/30 rounded-lg p-2 flex gap-2">
-        {navItems.map((item) => {
-          const Icon = item.icon;
-          const isActive = location === item.href;
-          
-          return (
-            <Link key={item.href} href={item.href}>
-              <Button
-                variant={isActive ? "default" : "ghost"}
-                size="sm"
-                className={`${
-                  isActive 
-                    ? "bg-gradient-to-r from-orange-500 to-yellow-500 text-black hover:from-orange-600 hover:to-yellow-600" 
-                    : "text-orange-300 hover:text-orange-400 hover:bg-orange-500/10"
-                } transition-all duration-200`}
-              >
-                <Icon className="w-4 h-4 mr-2" />
-                {item.label}
-              </Button>
+    <header className="fixed top-0 w-full z-50">
+      <nav className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="flex justify-between items-center py-4 transition-all duration-300">
+          <motion.h1
+            initial={{ opacity: 0, x: -20 }}
+            animate={{ opacity: 1, x: 0 }}
+            className="text-2xl font-bold gradient-text hover:scale-105 transition-transform duration-300"
+          >
+            AAF11
+          </motion.h1>
+          <div className="hidden md:flex items-center bg-gray-800/30 backdrop-blur-sm border border-gray-700/50 rounded-full px-6 py-2 space-x-6 hover:bg-gray-800/50 transition-all duration-300">
+            <Link 
+              href="/" 
+              className={`nav-link ${location === '/' ? 'active-nav-link' : ''}`}
+            >
+              HOME
             </Link>
-          );
-        })}
-      </div>
-    </nav>
+            <Link 
+              href="/shop" 
+              className={`nav-link ${location === '/shop' ? 'active-nav-link' : ''}`}
+            >
+              SHOP
+            </Link>
+            <Link 
+              href="/help" 
+              className={`nav-link ${location === '/help' ? 'active-nav-link' : ''}`}
+            >
+              GET OUR HELP
+            </Link>
+            <Link 
+              href="/about" 
+              className={`nav-link ${location === '/about' ? 'active-nav-link' : ''}`}
+            >
+              ABOUT US
+            </Link>
+          </div>
+        </div>
+      </nav>
+    </header>
   );
 }

@@ -3,7 +3,7 @@ import { motion, useScroll, useTransform } from "framer-motion";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
 import { Github, Linkedin, Instagram, FileText, X } from "lucide-react";
-import Navigation from "@/components/Navigation";
+import Header from "@/components/Navigation";
 import { fadeInUp } from "@/lib/animations";
 
 interface TeamMember {
@@ -156,7 +156,7 @@ export default function About() {
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-black via-gray-900 to-black text-white">
-      <Navigation />
+      <Header />
       
       {/* Hero Section */}
       <section className="pt-20 pb-16 px-4 sm:px-6 lg:px-8">

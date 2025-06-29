@@ -32,32 +32,30 @@
 }
 
 .nav-link {
-  @apply text-gray-300 font-medium px-3 py-2 rounded-md transition-all duration-300 relative;
+  @apply text-gray-300 font-medium px-3 py-1 rounded-full transition-all duration-300 relative;
 }
 
 .nav-link:hover {
   @apply text-orange-400 bg-orange-500/10 transform scale-105;
 }
 
-.nav-link::after {
+/* Active/Glowing navigation link */
+.active-nav-link {
+  @apply text-orange-400 font-semibold;
+  text-shadow: 0 0 10px rgba(249, 115, 22, 0.8), 0 0 20px rgba(249, 115, 22, 0.6);
+  background: linear-gradient(135deg, rgba(249, 115, 22, 0.1), rgba(234, 179, 8, 0.1));
+}
+
+.active-nav-link::after {
   content: '';
   position: absolute;
   bottom: -2px;
   left: 50%;
-  width: 0;
-  height: 2px;
-  background-color: linear-gradient(90deg, #f97316, #eab308);
-  transition: all 0.3s ease;
-  transform: translateX(-50%);
-}
-
-.nav-link:hover::after{
   width: 80%;
-}
-
-header:hover {
-  box-shadow: 0 4px 20px rgba(249,115,22,0.1);
-
+  height: 2px;
+  background: linear-gradient(90deg, #f97316, #eab308);
+  transform: translateX(-50%);
+  box-shadow: 0 0 8px rgba(249, 115, 22, 0.8);
 }
 .dark {
   --background: hsl(0, 0%, 5%);

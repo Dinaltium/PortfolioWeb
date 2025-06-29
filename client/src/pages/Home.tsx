@@ -4,6 +4,7 @@ import { Card, CardContent } from "@/components/ui/card";
 import { Code, Cpu, HandHeart } from "lucide-react";
 import { Link } from "wouter";
 import AnimatedSection from "@/components/AnimatedSection";
+import Header from "@/components/Navigation";
 import {
   fadeInUp,
   staggerContainer,
@@ -40,34 +41,7 @@ export default function Home() {
       ref={containerRef}
       className="min-h-screen bg-black text-white overflow-hidden"
     >
-      {/* Header */}
-      <header className="fixed top-0 w-full z-50 transition-all duration-500 ease-out hover:bg-black/95 bg-black/70 backdrop-blur-md border-b border-gray-800/50">
-        <nav className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-1">
-          <div className="flex justify-between items-center py-4 transition-all duration-300">
-            <motion.h1
-              initial={{ opacity: 0, x: -20 }}
-              animate={{ opacity: 1, x: 0 }}
-              className="text-2xl font-bold gradient-text hover:scale-105 transition-transform duration-300"
-            >
-              AAF11
-            </motion.h1>
-            <div className="hidden md:flex items-center bg-gray-800/30 backdrop-blur-sm border border-gray-700/50 rounded-full px-6 py-2 space-x-6 hover:bg-gray-800/50 transition-all duration-300">
-              <Link href="/" className="text-orange-400 font-semibold nav-link">
-                HOME
-              </Link>
-              <Link href="/shop" className="nav-link">
-                SHOP
-              </Link>
-              <Link href="/help" className="nav-link">
-                GET OUR HELP
-              </Link>
-              <Link href="/about" className="nav-link">
-                ABOUT US
-              </Link>
-            </div>
-          </div>
-        </nav>
-      </header>
+      <Header />
 
       {/* Hero Section */}
       <section className="min-h-screen flex items-center justify-center relative">
@@ -104,9 +78,9 @@ export default function Home() {
               animate={{ scale: 1, opacity: 1 }}
               transition={{ duration: 1, delay: 0.2 }}
             >
-              Professional Freelance
+              Edging to our customers
               <br />
-              <span className="text-4xl md:text-6xl">& Portfolio Services</span>
+              <span className="text-4xl md:text-6xl">with our services</span>
             </motion.h1>
 
             <motion.p
@@ -115,9 +89,7 @@ export default function Home() {
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8, delay: 0.5 }}
             >
-              Expert solutions in web development, electronic components, and
-              project consulting. Bringing your ideas to life with cutting-edge
-              technology and professional excellence.
+              Submit your queries to get our help or buy parts from our website. Don't worry as we will edge you until you are satisfied.
             </motion.p>
 
             <motion.div
@@ -128,11 +100,11 @@ export default function Home() {
             >
               <Link href="/shop">
                 <Button className="btn-primary glow-animation">
-                  Explore Our Services
+                  Shop
                 </Button>
               </Link>
-              <Link href="/about">
-                <Button className="btn-secondary">View Portfolio</Button>
+              <Link href="/help">
+                <Button className="btn-secondary">Need our Help?</Button>
               </Link>
             </motion.div>
           </motion.div>
@@ -151,7 +123,7 @@ export default function Home() {
                     Rafan Ahamad Sheik
                   </h3>
                   <p className="text-gray-300">
-                    Lead Developer & Electronics Specialist
+                    2nd Year CS
                   </p>
                 </CardContent>
               </Card>
@@ -164,7 +136,7 @@ export default function Home() {
                     T Mohammed Jazeel
                   </h3>
                   <p className="text-gray-300">
-                    Full-Stack Developer & Project Consultant
+                    2nd Year CS
                   </p>
                 </CardContent>
               </Card>
