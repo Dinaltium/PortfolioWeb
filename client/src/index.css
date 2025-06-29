@@ -1,0 +1,184 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --background: hsl(0, 0%, 5%);
+  --foreground: hsl(35, 100%, 98%);
+  --muted: hsl(0, 0%, 12%);
+  --muted-foreground: hsl(35, 20%, 65%);
+  --popover: hsl(0, 0%, 5%);
+  --popover-foreground: hsl(35, 100%, 98%);
+  --card: hsl(0, 0%, 8%);
+  --card-foreground: hsl(35, 100%, 98%);
+  --border: hsl(0, 0%, 15%);
+  --input: hsl(0, 0%, 12%);
+  --primary: hsl(35, 100%, 55%);
+  --primary-foreground: hsl(0, 0%, 5%);
+  --secondary: hsl(0, 0%, 12%);
+  --secondary-foreground: hsl(35, 100%, 98%);
+  --accent: hsl(30, 100%, 60%);
+  --accent-foreground: hsl(0, 0%, 5%);
+  --destructive: hsl(0, 84%, 60%);
+  --destructive-foreground: hsl(35, 100%, 98%);
+  --ring: hsl(35, 100%, 55%);
+  --radius: 0.75rem;
+  --orange: hsl(25, 100%, 55%);
+  --orange-foreground: hsl(0, 0%, 5%);
+  --gold: hsl(45, 100%, 55%);
+  --gold-foreground: hsl(0, 0%, 5%);
+}
+
+.nav-link {
+  @apply text-gray-300 font-medium px-3 py-2 rounded-md transition-all duration-300 relative;
+}
+
+.nav-link:hover {
+  @apply text-orange-400 bg-orange-500/10 transform scale-105;
+}
+
+.nav-link::after {
+  content: '';
+  position: absolute;
+  bottom: -2px;
+  left: 50%;
+  width: 0;
+  height: 2px;
+  background-color: linear-gradient(90deg, #f97316, #eab308);
+  transition: all 0.3s ease;
+  transform: translateX(-50%);
+}
+
+.nav-link:hover::after{
+  width: 80%;
+}
+
+header:hover {
+  box-shadow: 0 4px 20px rgba(249,115,22,0.1);
+
+}
+.dark {
+  --background: hsl(0, 0%, 5%);
+  --foreground: hsl(35, 100%, 95%);
+  --muted: hsl(0, 0%, 15%);
+  --muted-foreground: hsl(35, 40%, 70%);
+  --popover: hsl(0, 0%, 10%);
+  --popover-foreground: hsl(35, 100%, 95%);
+  --card: hsl(0, 0%, 8%);
+  --card-foreground: hsl(35, 100%, 95%);
+  --border: hsl(25, 30%, 20%);
+  --input: hsl(0, 0%, 12%);
+  --primary: hsl(35, 100%, 55%);
+  --primary-foreground: hsl(0, 0%, 5%);
+  --secondary: hsl(0, 0%, 15%);
+  --secondary-foreground: hsl(35, 100%, 95%);
+  --accent: hsl(45, 100%, 55%);
+  --accent-foreground: hsl(0, 0%, 5%);
+  --destructive: hsl(0, 84%, 60%);
+  --destructive-foreground: hsl(35, 100%, 95%);
+  --ring: hsl(35, 100%, 55%);
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply antialiased bg-background text-foreground;
+    font-family: 'Inter', sans-serif;
+  }
+
+  html {
+    scroll-behavior: smooth;
+  }
+}
+
+@layer components {
+  .gradient-text {
+    @apply bg-gradient-to-r from-orange-400 to-yellow-400 bg-clip-text text-transparent;
+  }
+
+  .card-hover {
+    @apply transition-all duration-300 transform hover:-translate-y-2 hover:shadow-2xl;
+  }
+
+  .btn-primary {
+    @apply px-8 py-4 bg-gradient-to-r from-orange-600 to-yellow-600 hover:from-orange-700 hover:to-yellow-700 rounded-xl font-semibold text-lg transition-all duration-300 transform hover:scale-105;
+  }
+
+  .btn-secondary {
+    @apply px-8 py-4 border-2 border-slate-600 hover:border-orange-400 rounded-xl font-semibold text-lg transition-all duration-300 hover:bg-orange-400/10;
+  }
+
+  .floating-animation {
+    animation: float 6s ease-in-out infinite;
+  }
+
+  .glow-animation {
+    animation: glow 2s ease-in-out infinite alternate;
+  }
+}
+
+@layer utilities {
+  .text-shadow {
+    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  }
+}
+
+@keyframes float {
+  0%, 100% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(-20px);
+  }
+}
+
+@keyframes glow {
+  0% {
+    box-shadow: 0 0 20px rgba(251, 146, 60, 0.3);
+  }
+  100% {
+    box-shadow: 0 0 30px rgba(251, 146, 60, 0.7);
+  }
+}
+
+@keyframes fadeInUp {
+  0% {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.animate-fadeInUp {
+  animation: fadeInUp 0.8s ease-out;
+}
+
+.backdrop-blur-custom {
+  backdrop-filter: blur(8px);
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: hsl(0, 0%, 12%);
+}
+
+::-webkit-scrollbar-thumb {
+  background: hsl(35, 100%, 55%);
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: hsl(35, 100%, 45%);
+}
