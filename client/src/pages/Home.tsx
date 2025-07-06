@@ -5,6 +5,7 @@ import { Code, Cpu, HandHeart } from "lucide-react";
 import { Link } from "wouter";
 import AnimatedSection from "@/components/AnimatedSection";
 import Header from "@/components/Navigation";
+import DotGrid from "@/components/DotGrid";
 import {
   fadeInUp,
   staggerContainer,
@@ -45,30 +46,25 @@ export default function Home() {
 
       {/* Hero Section */}
       <section className="min-h-screen flex items-center justify-center relative">
-        <motion.div
+        {/* <motion.div
           className="absolute inset-0 bg-gradient-to-br from-orange-900/20 to-yellow-900/20"
           style={{ y: yBg, opacity }}
-        />
+        /> */}
 
         {/* Interactive floating elements */}
-        <motion.div
-          className="absolute w-20 h-20 bg-orange-500/10 rounded-full"
-          style={{
-            x: useTransform(cursorX, [0, window.innerWidth], [20, 100]),
-            y: useTransform(cursorY, [0, window.innerHeight], [20, 80]),
-          }}
-          animate={{ scale: [1, 1.2, 1] }}
-          transition={{ duration: 4, repeat: Infinity }}
-        />
-        <motion.div
-          className="absolute w-32 h-32 bg-yellow-500/10 rounded-full"
-          style={{
-            x: useTransform(cursorX, [0, window.innerWidth], [200, 300]),
-            y: useTransform(cursorY, [0, window.innerHeight], [100, 200]),
-          }}
-          animate={{ scale: [1.2, 1, 1.2] }}
-          transition={{ duration: 6, repeat: Infinity }}
-        />
+        <div style={{ width: "100%", height: "100vh", position: "absolute" }}>
+          <DotGrid
+            dotSize={2}
+            gap={30}
+            baseColor="rgba(255, 255, 255, 0.57)"
+            activeColor="rgb(255, 136, 0)"
+            proximity={160}
+            shockRadius={310}
+            shockStrength={11}
+            resistance={1350}
+            returnDuration={1}
+          />
+        </div>
 
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center relative z-10">
           <motion.div {...fadeInUp}>
@@ -89,7 +85,8 @@ export default function Home() {
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8, delay: 0.5 }}
             >
-              Submit your queries to get our help or buy parts from our website. Don't worry as we will edge you until you are satisfied.
+              Submit your queries to get our help or buy parts from our website.
+              Don't worry as we will edge you until you are satisfied.
             </motion.p>
 
             <motion.div
@@ -99,9 +96,7 @@ export default function Home() {
               transition={{ duration: 0.8, delay: 0.8 }}
             >
               <Link href="/shop">
-                <Button className="btn-primary glow-animation">
-                  Shop
-                </Button>
+                <Button className="btn-primary glow-animation">Shop</Button>
               </Link>
               <Link href="/help">
                 <Button className="btn-secondary">Need our Help?</Button>
@@ -122,9 +117,7 @@ export default function Home() {
                   <h3 className="text-2xl font-semibold mb-2 text-orange-400">
                     Rafan Ahamad Sheik
                   </h3>
-                  <p className="text-gray-300">
-                    2nd Year CS
-                  </p>
+                  <p className="text-gray-300">2nd Year CS</p>
                 </CardContent>
               </Card>
             </motion.div>
@@ -135,9 +128,7 @@ export default function Home() {
                   <h3 className="text-2xl font-semibold mb-2 text-yellow-400">
                     T Mohammed Jazeel
                   </h3>
-                  <p className="text-gray-300">
-                    2nd Year CS
-                  </p>
+                  <p className="text-gray-300">2nd Year CS</p>
                 </CardContent>
               </Card>
             </motion.div>
