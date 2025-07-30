@@ -52,17 +52,17 @@ export default function Home() {
         /> */}
 
         {/* Interactive floating elements */}
-        <div style={{ width: "100%", height: "100vh", position: "absolute" }}>
+        <div style={{ width: "100%", height: "222vh", position: "absolute" }}>
           <DotGrid
             dotSize={2}
-            gap={30}
-            baseColor="rgba(255, 255, 255, 0.57)"
-            activeColor="rgb(255, 136, 0)"
-            proximity={160}
-            shockRadius={310}
-            shockStrength={11}
-            resistance={1350}
-            returnDuration={1}
+            gap={20}
+            baseColor="#FFFFFF"
+            activeColor="#f7dc6f "
+            proximity={500}
+            shockRadius={500}
+            shockStrength={5}
+            resistance={1100}
+            returnDuration={10}
           />
         </div>
 
@@ -146,7 +146,8 @@ export default function Home() {
       </section>
 
       {/* Services Section */}
-      <AnimatedSection className="py-20 bg-gray-900/30">
+
+      <AnimatedSection className="py-20" bg-transparent>
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
             <h2 className="text-4xl md:text-5xl font-bold mb-6 gradient-text">

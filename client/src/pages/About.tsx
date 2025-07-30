@@ -37,55 +37,51 @@ const teamMembers: TeamMember[] = [
   {
     id: "rafan",
     name: "Rafan Ahamad Sheik",
-    role: "Full Stack Developer & Co-Founder",
+    role: "Student",
     image: "/src/assets/rafan-photo.jpg", // You'll need to add actual photos
-    intro: "Passionate about creating innovative solutions that bridge technology and real-world problems.",
-    year: "Final Year",
+    intro: "Enthusiastic Computer Science undergraduate passionate about building impactful software and hardware-integrated systems",
+    year: "Third Year",
     college: "Engineering Student",
     goals: "To build technology that makes a meaningful impact and help fellow students succeed in their projects.",
-    skills: ["React", "Node.js", "Python", "MongoDB", "Express.js", "TypeScript", "Machine Learning"],
+    skills: ["React.js", "Python", "JavaScript", "TypeScript", "Machine Learning"],
     achievements: [
       {
-        title: "100+ Projects Completed",
+        title: "20+ Projects Completed",
         description: "Successfully delivered projects for students across multiple domains"
       },
       {
-        title: "Full Stack Expertise",
-        description: "Proficient in both frontend and backend development"
-      },
-      {
-        title: "Startup Experience",
-        description: "Co-founded AAF11 to provide project assistance services"
+        title: "Runner-up at ADC2025 Innovation Challenge",
+        description: "Awarded for building a machine learning-based screw sorting system using ESP32-CAM and ESP-NOW communication."
       }
     ],
     projects: [
       {
-        name: "E-Commerce Platform",
-        description: "Complete online shopping solution with payment integration",
-        tech: ["React", "Node.js", "MongoDB", "Stripe"]
+        name: "Bee Behavior Detection System",
+        description: "System for monitoring and analyzing bee behavior using computer vision",
+        tech: ["Python", "OpenCV", "TensorFlow"]
       },
       {
-        name: "Student Management System",
-        description: "Comprehensive system for managing student records and grades",
-        tech: ["Python", "Django", "PostgreSQL", "React"]
+        name: "Screw Sorting System using Machine Learning on ESP32-CAM",
+        description: "Comprehensive system for sorting screws based on size and type using machine learning",
+        tech: ["ESP32-CAM", "ESP32", "Edge Impulse", "Arduino", "ESP-NOW"]
       },
       {
-        name: "IoT Smart Home",
-        description: "Home automation system using ESP32 and mobile app",
-        tech: ["ESP32", "React Native", "Firebase", "Arduino"]
+        name: "Automated Feedback Form Filler",
+        description: "Created a tool to automate college feedback form submissions using Python and Selenium.",
+        tech: ["Python", "Selenium"]
       }
     ],
     social: {
-      github: "https://github.com/rafan",
-      linkedin: "https://linkedin.com/in/rafan",
-      instagram: "https://instagram.com/rafan",
-      resume: "#"
+      github: "https://github.com/Dinaltium",
+      linkedin: "https://www.linkedin.com/in/rafanahamad/",
+      instagram: "https://www.instagram.com/fakedinaltium/",
+      resume: "https://drive.google.com/file/d/1eZ7ZTQlaI8E2HLdrqNr2usRX5L2GeQYh/view?usp=sharing"
     }
   },
   {
     id: "jazeel",
     name: "T Mohammed Jazeel",
-    role: "Backend Developer & Co-Founder",
+    role: "Student",
     image: "/src/assets/jazeel-photo.jpg", // You'll need to add actual photos
     intro: "Dedicated backend developer with expertise in creating scalable and efficient server-side solutions.",
     year: "Final Year",
@@ -342,19 +338,19 @@ export default function About() {
                 <div className="text-center">
                   <h3 className="text-xl font-semibold mb-4 text-orange-400">Connect</h3>
                   <div className="flex justify-center space-x-6">
-                    <Button variant="ghost" size="sm" className="text-gray-300 hover:text-orange-400">
+                    <Button variant="ghost" size="sm" className="text-gray-300 hover:text-black" onClick={() => window.open(selectedMember.social.github, '_blank')}>
                       <Github className="w-5 h-5 mr-2" />
                       GitHub
                     </Button>
-                    <Button variant="ghost" size="sm" className="text-gray-300 hover:text-orange-400">
+                    <Button variant="ghost" size="sm" className="text-gray-300 hover:text-black" onClick={() => window.open(selectedMember.social.linkedin, '_blank')}>
                       <Linkedin className="w-5 h-5 mr-2" />
                       LinkedIn
                     </Button>
-                    <Button variant="ghost" size="sm" className="text-gray-300 hover:text-orange-400">
+                    <Button variant="ghost" size="sm" className="text-gray-300 hover:text-black" onClick={() => window.open(selectedMember.social.instagram, '_blank')}>
                       <Instagram className="w-5 h-5 mr-2" />
                       Instagram
                     </Button>
-                    <Button variant="ghost" size="sm" className="text-gray-300 hover:text-orange-400">
+                    <Button variant="ghost" size="sm" className="text-gray-300 hover:text-black" onClick={() => window.open(selectedMember.social.resume, '_blank')}>
                       <FileText className="w-5 h-5 mr-2" />
                       Resume
                     </Button>
