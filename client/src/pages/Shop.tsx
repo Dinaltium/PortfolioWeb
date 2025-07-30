@@ -245,7 +245,7 @@ export default function Shop() {
           <div className="lg:w-1/2">
             <div className="relative">
               <img
-                src="src/assets/DEVBOARDS.png"
+                src="/DEVBOARDS.png"
                 alt="Electronic Components"
                 className="rounded-lg shadow-2xl w-full"
               />

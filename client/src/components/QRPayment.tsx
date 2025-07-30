@@ -6,7 +6,7 @@ import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
 import { Upload, Camera } from "lucide-react";
 // QR code image
-const qrCodeImage = "/src/assets/qr-code.png";
+const qrCodeImage = "/qr-code.png";
 
 interface QRPaymentProps {
   isOpen: boolean;
