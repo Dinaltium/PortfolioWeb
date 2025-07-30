@@ -38,7 +38,7 @@ const teamMembers: TeamMember[] = [
     id: "rafan",
     name: "Rafan Ahamad Sheik",
     role: "Student",
-    image: "/src/assets/rafan-photo.jpg", // You'll need to add actual photos
+    image: "/src/assets/RafanPic.jpg", // You'll need to add actual photos
     intro: "Enthusiastic Computer Science undergraduate passionate about building impactful software and hardware-integrated systems",
     year: "Third Year",
     college: "Engineering Student",
@@ -82,9 +82,9 @@ const teamMembers: TeamMember[] = [
     id: "jazeel",
     name: "T Mohammed Jazeel",
     role: "Student",
-    image: "/src/assets/jazeel-photo.jpg", // You'll need to add actual photos
+    image: "/src/assets/JazeelPic.jpeg", // You'll need to add actual photos
     intro: "Dedicated backend developer with expertise in creating scalable and efficient server-side solutions.",
-    year: "Final Year",
+    year: "Third Year",
     college: "Engineering Student",
     goals: "To master backend architecture and help students build robust, scalable applications.",
     skills: ["Node.js", "Python", "Express.js", "MongoDB", "PostgreSQL", "AWS", "Docker"],
@@ -120,10 +120,10 @@ const teamMembers: TeamMember[] = [
       }
     ],
     social: {
-      github: "https://github.com/jazeel",
-      linkedin: "https://linkedin.com/in/jazeel",
-      instagram: "https://instagram.com/jazeel",
-      resume: "#"
+      github: "https://github.com/jazeeljr",
+      linkedin: "https://www.linkedin.com/in/mohammed-jazeel-43111a27b/",
+      instagram: "https://www.instagram.com/mohammed_jazeel05/",
+      resume: "https://drive.google.com/file/d/15kyD-IZwPdjGLeSq5tj5TbWT2e8xZqSS/view?usp=drive_link"
     }
   }
 ];
@@ -263,12 +263,12 @@ export default function About() {
                 </div>
 
                 {/* Details Grid */}
-                <div className="grid md:grid-cols-2 gap-8">
+                <div className="grid md:grid-cols-2 gap-5">
                   {/* About */}
                   <Card className="bg-gray-800/50 border-gray-700">
                     <CardContent className="p-6">
                       <h3 className="text-xl font-semibold mb-4 text-orange-400">About</h3>
-                      <div className="space-y-3 text-gray-300">
+                      <div className="space-y-2 text-gray-300">
                         <p><span className="text-gray-400">Year:</span> {selectedMember.year}</p>
                         <p><span className="text-gray-400">College:</span> {selectedMember.college}</p>
                         <p><span className="text-gray-400">Goals:</span> {selectedMember.goals}</p>

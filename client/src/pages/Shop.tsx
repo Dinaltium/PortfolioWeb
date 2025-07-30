@@ -201,7 +201,7 @@ export default function Shop() {
       <div className="min-h-screen bg-slate-900 text-white flex items-center justify-center">
         <div className="text-center">
           <div className="animate-spin rounded-full h-32 w-32 border-b-2 border-blue-500 mx-auto mb-4"></div>
-          <p className="text-xl">Loading products...</p>
+          <p className="text-xl">Loading products.. even though we have nothing in stock</p>
         </div>
       </div>
     );
@@ -215,16 +215,13 @@ export default function Shop() {
       <section className="bg-gradient-to-r from-orange-600 to-yellow-500 text-black py-16 px-4 sm:px-6 lg:px-8 mb-12">
         <div className="max-w-7xl mx-auto flex flex-col lg:flex-row items-center">
           <div className="lg:w-1/2 mb-8 lg:mb-0">
-            <div className="inline-block bg-orange-200 text-orange-800 px-3 py-1 rounded-full text-sm font-semibold mb-4">
-              Free Shipping - orders over ₹1000
-            </div>
+            
             <h2 className="text-4xl lg:text-6xl font-bold mb-6">
-              Premium Electronics for
+              Electronic <span className="text-4xl lg:text-6xl font-bold mb-6">components for</span>
               <span className="block text-yellow-800">Your Projects</span>
             </h2>
             <p className="text-xl mb-8 text-gray-800">
-              Quality components from Arduino to ESP32. Everything you need for your next innovation, 
-              delivered fast with expert support.
+              Quality components from Arduino to ESP32 to sensors and actuators and much more. Just wait until we get the components in stock
             </p>
             <div className="flex flex-col sm:flex-row gap-4 items-center">
               <Input 
@@ -248,13 +245,13 @@ export default function Shop() {
           <div className="lg:w-1/2">
             <div className="relative">
               <img
-                src="https://images.unsplash.com/photo-1553406830-ef2513450d76?w=600&h=400&fit=crop"
+                src="src/assets/DEVBOARDS.png"
                 alt="Electronic Components"
                 className="rounded-lg shadow-2xl w-full"
               />
               <div className="absolute -bottom-4 -right-4 bg-black text-white p-4 rounded-lg">
-                <p className="text-sm">100+ Components</p>
-                <p className="text-xl font-bold">In Stock</p>
+                <p className="text-sm">20+ Components</p>
+                <p className="text-xl font-bold">Not in Stock, YET</p>
               </div>
             </div>
           </div>
@@ -305,15 +302,6 @@ export default function Shop() {
 
       {/* Shop Content */}
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20">
-        <AnimatedSection className="text-center mb-16">
-          <h2 className="text-4xl md:text-5xl font-bold mb-6 bg-gradient-to-r from-orange-400 to-yellow-400 bg-clip-text text-transparent">
-            Premium Electronic Components
-          </h2>
-          <p className="text-xl text-slate-300 max-w-3xl mx-auto">
-            Quality electronic components for students and professionals. Fast delivery and competitive prices.
-          </p>
-        </AnimatedSection>
-
         {/* Filter Status */}
         {(searchTerm || selectedCategory) && (
           <div className="mb-8 text-center">

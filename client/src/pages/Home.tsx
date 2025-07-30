@@ -74,7 +74,7 @@ export default function Home() {
               animate={{ scale: 1, opacity: 1 }}
               transition={{ duration: 1, delay: 0.2 }}
             >
-              Edging to our customers
+              Helping our peers and juniors
               <br />
               <span className="text-4xl md:text-6xl">with our services</span>
             </motion.h1>
@@ -86,7 +86,6 @@ export default function Home() {
               transition={{ duration: 0.8, delay: 0.5 }}
             >
               Submit your queries to get our help or buy parts from our website.
-              Don't worry as we will edge you until you are satisfied.
             </motion.p>
 
             <motion.div
